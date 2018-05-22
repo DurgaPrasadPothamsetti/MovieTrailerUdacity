@@ -1,10 +1,10 @@
 import webbrowser
 
 
-class Movie():
+class movie():
 
     """
-    class Movie:
+    class movie:
         represents a movie objets
         Args:
         title = a string of the movie's title

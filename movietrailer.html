@@ -1,8 +1,4 @@
-import webbrowser
-import os
-import re
 
-main_page_head = '''
 <!DOCTYPE html>
 <html>
 
@@ -96,8 +92,7 @@ main_page_head = '''
         });
     </script>
 </head>
-'''
-main_page_content = '''
+
 <body>
     <div class="modal" id="trailer">
         <div class="modal2">
@@ -181,45 +176,3 @@ main_page_content = '''
 </body>
 
 </html>
-'''
-movie_title = '''
- <div class="col-sm-6 col-lg-4 class2 text-center"
- data-trailer-youtube-id="R-cdIvgBCWY"
- data-toggle="modal" data-target="#trailer">
-            <img src="{poster_image_url}" width="220" height="342">
-            <h2 style="color:white;">{movie_title}</h2>
-</div>
-'''
-
-
-def create_movie_tiles_content(movies):
-    content = ''
-    for movie in movies:
-
-        youtube_id_match = re.search(
-            r'(?<=v=)[^&#]+', movie.trailer_youtube_url)
-        youtube_id_match = youtube_id_match or re.search(
-            r'(?<=be/)[^&#]+', movie.trailer_youtube_url)
-        trailer_youtube_id = (youtube_id_match.group(0) if youtube_id_match
-                              else None)
-
-        content += movie_title.format(
-            movie_title=movie.title,
-            poster_image_url=movie.poster_image_url,
-            trailer_youtube_id=trailer_youtube_id,
-            storyline=movie.storyline
-        )
-    return content
-
-
-def open_movies_page(movies):
-    output_file = open('movietrailer.html', 'w')
-    # Replace the placeholder for the movie tiles with the actual dynamically generated content
-    rendered_content = main_page_content.format(
-        movie_tiles=create_movie_tiles_content(movies))
-    # Output the file
-    output_file.write(main_page_head + rendered_content)
-    output_file.close()
-    # open the output file in the browser
-    url = os.path.abspath(output_file.name)
-    webbrowser.open('file://' + url, new=2) # open in a new tab, if possible

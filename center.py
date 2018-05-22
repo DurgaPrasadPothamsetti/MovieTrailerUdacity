@@ -2,30 +2,27 @@ import media
 import fresh_tomatoes
 
 
-AIW = media.movie(
-    "Avengers Infinity War",
-    "Stopping Thanos",
-    "https://bit.ly/2rZ9HDT",
-    "https://youtu.be/6ZfuNTqbHE8")
-W_W = media.movie(
-    "Wonder Woman", "Brave lady",
-    "https://bit.ly/2IXVMre",
-    "https://youtu.be/VSB4wGIdDwo")
-B_B = media.movie("Boss Babby",
-                  "Kid from business school",
-                  "https://bit.ly/2LjBo20",
-                  "https://youtu.be/h24gEn3y82Q")
-CROODS = media.movie(
-    "THE Croods", "Cave man Life",
-    "https://bit.ly/2IAPJW6",
-    "https://youtu.be/4fVCKy69zUY")
-FROZEN = media.movie(
-    "FROZEN", "Finding sister",
-    "https://bit.ly/2x3yrQc",
-    "https://youtu.be/TbQm5doF_Uc")
-T_J = media.movie(
-    "Tom and Jerry", "Land of OZ",
-    "https://bit.ly/2ICfucL",
-    "https://youtu.be/tyE8XnZBJQA")
-movies = [AIW, W_W, B_B, CROODS, FROZEN, T_J]
+Agn = media.movie(
+    "Agnyathavaasi",
+    "powerstar venky ",
+    "https://www.25cineframes.com/images/gallery/2017/09/pawan-kalyan-trivikram-srinivas-pspk25-movie-first-look-all-ultra-hd-posters-wallpapers/54-Pawan-Kalyan-Agnathavasi-Movie-First-Look-ULTRA-HD-Posters-WallPapers.jpg",
+    "https://www.youtube.com/embed/97h9fBWltBM")
+NPSNIN = media.movie(
+    "Na Peru Surya Na illu India", "Brave man",
+    "https://files.prokerala.com/movies/pics/728w/naa-peru-surya-poster-84822.jpg",
+    "https://www.youtube.com/embed/ZnVIUr_BQSs")
+KAY = media.movie("Krishna arjuna yuddham",
+                  "Krish and arjun brothers war for heroines",
+                  "https://files.prokerala.com/movies/pics/728w/ugadi-wishes-poster-85599.jpg",
+                  "https://www.youtube.com/embed/7A1Y1ExiQRw")
+BAN = media.movie(
+    "Bharath Ane Nenu", "Cm",
+    "https://files.prokerala.com/movies/pics/728w/bharath-ane-nenu-poster-83322.jpg",
+    "https://www.youtube.com/embed/KMWS5y2gZ6E")
+Rangasthalam = media.movie(
+    "rangathalam", "Finding president",
+    "https://files.prokerala.com/movies/pics/728w/rangasthalam-new-posters-85600.jpg",
+    "https://www.youtube.com/embed/mhhb6JAJKbE")
+
+movies = [Agn,NPSNIN, KAY, BAN, Rangasthalam]
 fresh_tomatoes.open_movies_page(movies)
