@@ -141,7 +141,7 @@ main_page_content = '''
         <div class="col-sm-6 col-lg-4 class2 text-center"
         data-trailer-youtube-id="97h9fBWltBM"
         data-toggle="modal" data-target="#trailer">
-            <img src="https://www.25cineframes.com/images/gallery/2017/09/pawan-kalyan-trivikram-srinivas-pspk25-movie-first-look-all-ultra-hd-posters-wallpapers/54-Pawan-Kalyan-Agnathavasi-Movie-First-Look-ULTRA-HD-Posters-WallPapers.jpg" width="220" height="342">
+            <img src="https://bit.ly/2s2Yi53" width="220" height="342">
             <h2>Agnyathavasi</h2>
             <p>Power Star</p>
 
@@ -150,7 +150,7 @@ main_page_content = '''
         <div class="col-sm-6 col-lg-4 class2 text-center"
         data-trailer-youtube-id="ZnVIUr_BQSs"
         data-toggle="modal" data-target="#trailer">
-            <img src="https://files.prokerala.com/movies/pics/728w/naa-peru-surya-poster-84822.jpg" width="220" height="342">
+            <img src="https://bit.ly/2LoovnC" width="220" height="342">
             <h2>Na Peru Surya Na Illu India</h2>
             <p>Anger Mnagement Zero</p>
         </div>
@@ -158,7 +158,7 @@ main_page_content = '''
         <div class="col-sm-6 col-lg-4 class2 text-center"
         data-trailer-youtube-id="7A1Y1ExiQRw"
         data-toggle="modal" data-target="#trailer">
-            <img src="https://files.prokerala.com/movies/pics/728w/ugadi-wishes-poster-85599.jpg" width="220" height="342">
+            <img src="https://bit.ly/2IC4sUF" width="220" height="342">
             <h2>Krishnarjuna Yuddham</h2>
             <p>Finding 2 Heroines</p>
         </div>
@@ -166,14 +166,14 @@ main_page_content = '''
         <div class="col-sm-6 col-lg-4 class2 text-center"
         data-trailer-youtube-id="KMWS5y2gZ6E"
         data-toggle="modal" data-target="#trailer">
-            <img src="https://files.prokerala.com/movies/pics/728w/bharath-ane-nenu-poster-83322.jpg" width="200" height="342">
+            <img src="https://bit.ly/2x23iMQ" width="200" height="342">
             <h2>Bharath Ane Nenu</h2>
             <p>Young CM</p>
         </div>
         <div class="col-sm-6 col-lg-4 class2 text-center"
         data-trailer-youtube-id="mhhb6JAJKbE"
         data-toggle="modal" data-target="#trailer">
-            <img src="https://files.prokerala.com/movies/pics/728w/rangasthalam-new-posters-85600.jpg" width="200" height="342">
+            <img src="https://bit.ly/2s52wcf" width="200" height="342">
             <h2>Rangasthalam</h2>
             <p>deaf chittibabu president war</p>
         </div>
@@ -214,7 +214,7 @@ def create_movie_tiles_content(movies):
 
 def open_movies_page(movies):
     output_file = open('movietrailer.html', 'w')
-    # Replace the placeholder for the movie tiles with the actual dynamically generated content
+    # Replace placeholderformovie tiles with the actual dynamically
     rendered_content = main_page_content.format(
         movie_tiles=create_movie_tiles_content(movies))
     # Output the file
@@ -222,4 +222,4 @@ def open_movies_page(movies):
     output_file.close()
     # open the output file in the browser
     url = os.path.abspath(output_file.name)
-    webbrowser.open('file://' + url, new=2) # open in a new tab, if possible
+    webbrowser.open('file://' + url, new=2)   # open in a new tab, if possible
